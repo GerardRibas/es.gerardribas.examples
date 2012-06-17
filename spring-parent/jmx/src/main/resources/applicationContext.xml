@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+	<!-- SIMPLE ANNOTATED MBEAN -->
+	<bean id="dateService" class="es.gerardribas.example.spring.jmx.impl.DateMBeanImpl" />
+
+	<!-- REGISTER SPRING BEANS TO JMX MBEAN SERVER -->
+	<bean id="mBeanExporter" class="org.springframework.jmx.export.MBeanExporter">
+		<property name="beans">
+			<map>
+				<entry key="bean:name=dateService" value-ref="dateService" />
+			</map>
+		</property>
+	</bean>
+
+	<!-- The above configuration assumes that the application is running in 
+		an environment that has one (and only one) MBeanServer already running. In 
+		this case, Spring will attempt to locate the running Spring Framework 3.1 
+		Reference Documentation 630MBeanServer and register your beans with that 
+		server (if any). This behavior is useful when your application is running 
+		inside a container such as Tomcat or IBM WebSphere that has its own MBeanServer. <bean id="mbeanServer" class="org.springframework.jmx.support.MBeanServerFactoryBean" /> -->
+
+	
+	<!-- This configuration is only when you don't have JMX Server and it's needed to publish with RMI Service -->
+	<bean class="org.springframework.remoting.rmi.RmiRegistryFactoryBean">
+		<property name="port" value="1099" />
+	</bean>
+	<bean class="org.springframework.jmx.support.ConnectorServerFactoryBean">
+		<property name="serviceUrl"
+			value="service:jmx:rmi://localhost/jndi/rmi://localhost:1099/dateService" />
+	</bean>
+
+	<!-- CLient Side For Test-->
+	<bean id="clientConnector"
+		class="org.springframework.jmx.support.MBeanServerConnectionFactoryBean">
+		<property name="serviceUrl"
+			value="service:jmx:rmi://localhost/jndi/rmi://localhost:1099/dateService" />
+	</bean>
+</beans>
