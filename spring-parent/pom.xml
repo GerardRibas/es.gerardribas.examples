@@ -36,5 +36,6 @@
 
 	<modules>
 		<module>jmx</module>
+		<module>spring-dependency-injection-annotation</module>
 	</modules>
 </project>
