@@ -37,9 +37,8 @@
 	<modules>
 		<module>jmx</module>
 		<module>spring-dependency-injection-annotation</module>
-<<<<<<< HEAD
 		<module>spring-dependency-injection-xml</module>
-=======
->>>>>>> fef1927956ea183838bcad0df241092c04c3bd30
+		<module>spring-vaadin</module>
+		<module>example-common</module>
 	</modules>
 </project>

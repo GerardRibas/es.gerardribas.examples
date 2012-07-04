@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>spring-parent</artifactId>
+		<groupId>es.gerardribas</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>..</relativePath>
+	</parent>
+	<artifactId>example-common</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>es.gerardribas</groupId>
+			<artifactId>persistence</artifactId>
+			<version>${gerardribas.persistence.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate-core-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>${org.hsqldb.version}</version>
+		</dependency>
+	</dependencies>
+	
+	<properties>
+		<gerardribas.persistence.version>0.0.1-SNAPSHOT</gerardribas.persistence.version>
+		<hibernate-core-version>3.6.8.Final</hibernate-core-version>
+		<org.hsqldb.version>2.2.6</org.hsqldb.version>
+	</properties>
+
+</project>
