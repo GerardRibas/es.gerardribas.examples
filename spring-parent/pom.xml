@@ -40,5 +40,6 @@
 		<module>spring-dependency-injection-xml</module>
 		<module>example-common</module>
 		<module>spring-vaadin</module>
+		<module>spring-activitibpm</module>
 	</modules>
 </project>
