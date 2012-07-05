@@ -10,7 +10,7 @@ import es.gerardribas.example.common.domain.BillLine;
 import es.gerardribas.persistence.dao.impl.AbstractJpaDaoImpl;
 
 /**
- * @author AT
+ * @author
  *
  */
 @SuppressWarnings("serial")
