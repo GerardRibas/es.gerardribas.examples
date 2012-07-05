@@ -17,9 +17,11 @@
 			</documentation>
     </userTask>
     <endEvent id="theEnd" name="End"></endEvent>
+    <serviceTask id="springServiceTask" name="Injected Spring ServiceTask" activiti:delegateExpression="${SpringServiceTask}"></serviceTask>
     <sequenceFlow id="flow1" name="Start" sourceRef="theStart" targetRef="writeReportTask"></sequenceFlow>
     <sequenceFlow id="flow2" name="" sourceRef="writeReportTask" targetRef="verifyReportTask"></sequenceFlow>
-    <sequenceFlow id="flow3" name="Name" sourceRef="verifyReportTask" targetRef="theEnd"></sequenceFlow>
+    <sequenceFlow id="flow3" name="" sourceRef="verifyReportTask" targetRef="springServiceTask"></sequenceFlow>
+    <sequenceFlow id="flow4" name="" sourceRef="springServiceTask" targetRef="theEnd"></sequenceFlow>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_financialReport">
     <bpmndi:BPMNPlane bpmnElement="financialReport" id="BPMNPlane_financialReport">
@@ -30,10 +32,13 @@
         <omgdc:Bounds height="55" width="105" x="280" y="230"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="verifyReportTask" id="BPMNShape_verifyReportTask">
-        <omgdc:Bounds height="55" width="105" x="550" y="230"></omgdc:Bounds>
+        <omgdc:Bounds height="55" width="105" x="490" y="230"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="theEnd" id="BPMNShape_theEnd">
         <omgdc:Bounds height="35" width="35" x="860" y="240"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="springServiceTask" id="BPMNShape_springServiceTask">
+        <omgdc:Bounds height="55" width="105" x="690" y="230"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
         <omgdi:waypoint x="95" y="257"></omgdi:waypoint>
@@ -41,10 +46,14 @@
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2">
         <omgdi:waypoint x="385" y="257"></omgdi:waypoint>
-        <omgdi:waypoint x="550" y="257"></omgdi:waypoint>
+        <omgdi:waypoint x="490" y="257"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow3" id="BPMNEdge_flow3">
-        <omgdi:waypoint x="655" y="257"></omgdi:waypoint>
+        <omgdi:waypoint x="595" y="257"></omgdi:waypoint>
+        <omgdi:waypoint x="690" y="257"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow4" id="BPMNEdge_flow4">
+        <omgdi:waypoint x="795" y="257"></omgdi:waypoint>
         <omgdi:waypoint x="860" y="257"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>

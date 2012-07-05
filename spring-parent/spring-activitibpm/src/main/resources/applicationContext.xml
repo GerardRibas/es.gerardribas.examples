@@ -35,5 +35,11 @@
 	<bean id="managementService" factory-bean="processEngine" factory-method="getManagementService" />
 	
 	<context:annotation-config/>
-
+	
+	<bean id="myServiceImpl" class="es.gerardribas.example.spring.activiti.MyServiceImpl" />
+	
+	<bean id="SpringServiceTask" class="es.gerardribas.example.spring.activiti.SpringServiceTask">
+		<property name="service" ref="myServiceImpl" />
+	</bean>
+	
 </beans>
