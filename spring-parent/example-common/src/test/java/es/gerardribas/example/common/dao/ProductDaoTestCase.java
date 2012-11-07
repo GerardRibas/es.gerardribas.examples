@@ -7,7 +7,6 @@ import java.util.List;
 
 import junit.framework.Assert;
 
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,7 +46,6 @@ public class ProductDaoTestCase {
 	}
 	
 	@Test(expected=javax.persistence.PersistenceException.class)
-	@Ignore
 	public void testPersistWithANullValue() {
 		Product product = new Product();
 		product.setName("A");

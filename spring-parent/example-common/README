@@ -1,0 +1,33 @@
+Gerard Ribas: Example Common
+=================
+
+This is the readme file for example-common project.
+
+This project it will be for persistence and business layer. 
+
+You can see at the moment the persistence layer using my other project es.gerardribas.persistence that it has an Abstract Dao with all the common database accessors. 
+
+What is in this package
+=======================
+
+You have only 2 packages:
+
+	--src
+		--es.gerardribas.example.common.dao (Interfaces of some DAO examples)
+		--es.gerardribas.example.common.dao.impl (Implementation of som DAO examples)
+		--es.gerardribas.example.common.domain (Domain Objects refereds in Database)
+		
+	--test
+		--es.gerardribas.example.common.dao (Testing all the DAO implemetations)
+
+This run's? Let's try it!
+=========================
+
+Remember! You need previously installed this dependency: 
+	<dependency>
+		<groupId>es.gerardribas</groupId>
+		<artifactId>persistence</artifactId>
+		<version>SOME VERSION...</version>
+	</dependency>
+
+Thanks for watching

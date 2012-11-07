@@ -29,8 +29,8 @@
 	
 	<properties>
 		<gerardribas.persistence.version>0.0.1-SNAPSHOT</gerardribas.persistence.version>
-		<hibernate-core-version>3.6.8.Final</hibernate-core-version>
-		<org.hsqldb.version>2.2.6</org.hsqldb.version>
+		<hibernate-core-version>4.1.7.Final</hibernate-core-version>
+		<org.hsqldb.version>2.2.8</org.hsqldb.version>
 	</properties>
 
 </project>
