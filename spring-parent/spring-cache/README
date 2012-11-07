@@ -1,0 +1,34 @@
+Gerard Ribas: Spring Cache
+=================
+
+This is the readme file for spring-cache project.
+
+In this project you can see the new feature included in Spring since version 3.1. With this example you can see how it's easy to adding caching into an existing application. 
+
+It's easy to use, only we need to put @Cacheable in the method that we want to cache. For removing cache we need to put @CacheEvict and cache it's deleted.
+
+This simple example only uses a simple JDK Cache implementation. (JDK ConcurrentMap-based)
+
+What is in this package
+=======================
+
+	--src
+		--es.gerardribas.example.spring.cache
+	--test
+		--es.gerardribas.example.spring.cache
+
+This run's? Let's try it!
+=========================
+
+Remember! You need previously installed this dependency: 
+	<dependency>
+		<groupId>es.gerardribas</groupId>
+		<artifactId>persistence</artifactId>
+		<version>SOME VERSION...</version>
+	</dependency>
+
+For test this new feature I created a very very simple test case that you can see how it's easy to fill the cache and how it's easy to deleting.
+
+For more information visit: http://static.springsource.org/spring/docs/3.1.2.RELEASE/spring-framework-reference/html/cache.html
+
+Thanks for watching
