@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>es.gerardribas</groupId>
 	<artifactId>example-parent</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Examples Parent</name>
 	<description>All PoC developed by Gerard Ribas Canals</description>
@@ -13,8 +13,10 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<org.slf4j.version>1.6.6</org.slf4j.version>
+		<org.slf4j.version>1.7.2</org.slf4j.version>
 		<log4j.version>1.2.17</log4j.version>
+		<java.version>1.6</java.version>
+		<encoding>UTF-8</encoding>
 	</properties>
 
 	<dependencies>
@@ -42,9 +44,9 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
 					<configuration>
-						<source>1.6</source>
-						<target>1.6</target>
-						<encoding>UTF-8</encoding>
+						<source>${java.version}</source>
+						<target>${java.version}</target>
+						<encoding>${encoding}</encoding>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -52,10 +54,65 @@
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>2.5</version>
 					<configuration>
-						<encoding>UTF-8</encoding>
+						<encoding>${encoding}</encoding>
 					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.4</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
+		<extensions>
+			<!-- Extension required to deploy a snapshot or a release to the CloudBees 
+				remote maven repository using Webdav -->
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-webdav</artifactId>
+				<version>1.0-beta-2</version>
+			</extension>
+		</extensions>
 	</build>
+
+	<!-- REPOSITORY FOR GERARDRIBAS DEPENDENCIES -->
+	<repositories>
+		<repository>
+			<id>cloudbees-public-release-repository</id>
+			<name>Gerard Ribas Releases</name>
+			<url>http://repository-gribas.forge.cloudbees.com/release/</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+
+	<issueManagement>
+		<system>Github</system>
+		<url>http://github.com/GerardRibas/es.gerardribas.examples/issues</url>
+	</issueManagement>
+
+	<scm>
+		<connection>scm:git:git@github.com:GerardRibas/es.gerardribas.examples.git</connection>
+		<developerConnection>scm:git:git@github.com:GerardRibas/es.gerardribas.examples.git</developerConnection>
+		<url>http://github.com/GerardRibas/es.gerardribas.examples</url>
+		<tag>HEAD</tag>
+	</scm>
+
+	<distributionManagement>
+		<!-- Project available for all users in my public repository. Thanks to 
+			cloudbees. -->
+		<repository>
+			<id>cloudbees-public-release-repository</id>
+			<name>Gerard Ribas Releases</name>
+			<url>dav:https://repository-gribas.forge.cloudbees.com/release/</url>
+			<layout>default</layout>
+		</repository>
+		<snapshotRepository>
+			<id>cloudbees-public-snapshot-repository</id>
+			<name>Gerard Ribas Snapshots</name>
+			<url>dav:https://repository-gribas.forge.cloudbees.com/snapshot/</url>
+			<layout>default</layout>
+		</snapshotRepository>
+	</distributionManagement>
+
+
 </project>

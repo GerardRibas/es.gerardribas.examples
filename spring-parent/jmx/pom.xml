@@ -4,16 +4,9 @@
 	<parent>
 		<artifactId>spring-parent</artifactId>
 		<groupId>es.gerardribas</groupId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
 	<artifactId>jmx</artifactId>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${org.springframework.version}</version>
-		</dependency>
-	</dependencies>
 </project>

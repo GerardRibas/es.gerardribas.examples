@@ -3,8 +3,7 @@
  */
 package es.gerardribas.example.spring.di.annotated;
 
-import junit.framework.Assert;
-
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;

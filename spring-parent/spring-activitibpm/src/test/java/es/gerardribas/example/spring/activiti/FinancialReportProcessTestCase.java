@@ -2,11 +2,10 @@ package es.gerardribas.example.spring.activiti;
 
 import java.util.List;
 
-import junit.framework.Assert;
-
 import org.activiti.engine.RuntimeService;
 import org.activiti.engine.TaskService;
 import org.activiti.engine.task.Task;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;

@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>spring-parent</artifactId>
 		<groupId>es.gerardribas</groupId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
 	<artifactId>example-common</artifactId>
@@ -28,9 +28,9 @@
 	</dependencies>
 	
 	<properties>
-		<gerardribas.persistence.version>0.0.1-SNAPSHOT</gerardribas.persistence.version>
-		<hibernate-core-version>4.1.7.Final</hibernate-core-version>
-		<org.hsqldb.version>2.2.8</org.hsqldb.version>
+		<gerardribas.persistence.version>1.0.0-RELEASE</gerardribas.persistence.version>
+		<hibernate-core-version>4.1.9.Final</hibernate-core-version>
+		<org.hsqldb.version>2.2.9</org.hsqldb.version>
 	</properties>
 
 </project>

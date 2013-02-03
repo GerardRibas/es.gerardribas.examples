@@ -4,15 +4,15 @@
 	<parent>
 		<artifactId>spring-parent</artifactId>
 		<groupId>es.gerardribas</groupId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
 	<artifactId>spring-vaadin</artifactId>
 	<packaging>war</packaging>
 
 	<properties>
-		<vaadin.version>6.8.0</vaadin.version>
-		<aspectj.version>1.6.12</aspectj.version>
+		<vaadin.version>6.8.7</vaadin.version>
+		<aspectj.version>1.7.1</aspectj.version>
 	</properties>
 
 	<dependencies>
@@ -56,11 +56,10 @@
 			<artifactId>aspectjtools</artifactId>
 			<version>${aspectj.version}</version>
 		</dependency>
-		
 		<dependency>
 			<groupId>es.gerardribas</groupId>
 			<artifactId>example-common</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 
@@ -69,7 +68,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>aspectj-maven-plugin</artifactId>
-				<version>1.0</version>
+				<version>1.4</version>
 				<dependencies>
 					<dependency>
 						<groupId>org.aspectj</groupId>
@@ -105,7 +104,7 @@
 			<plugin>
 				<groupId>org.mortbay.jetty</groupId>
 				<artifactId>maven-jetty-plugin</artifactId>
-				<version>6.1.10</version>
+				<version>6.1H.14.1</version>
 				<configuration>
 					<scanIntervalSeconds>10</scanIntervalSeconds>
 					<stopKey>foo</stopKey>
