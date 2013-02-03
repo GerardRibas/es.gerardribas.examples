@@ -3,7 +3,7 @@
 	<parent>
 		<artifactId>spring-parent</artifactId>
 		<groupId>es.gerardribas</groupId>
-		<version>1.0.0-RELEASE</version>
+		<version>1.0.1-SNAPSHOT</version>
 		<relativePath>..</relativePath>
 	</parent>
 	<artifactId>spring-dependency-injection-xml</artifactId>

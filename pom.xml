@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>es.gerardribas</groupId>
 	<artifactId>example-parent</artifactId>
-	<version>1.0.0-RELEASE</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Examples Parent</name>
 	<description>All PoC developed by Gerard Ribas Canals</description>
@@ -93,7 +93,7 @@
 		<connection>scm:git:git@github.com:GerardRibas/es.gerardribas.examples.git</connection>
 		<developerConnection>scm:git:git@github.com:GerardRibas/es.gerardribas.examples.git</developerConnection>
 		<url>http://github.com/GerardRibas/es.gerardribas.examples</url>
-		<tag>example-parent-1.0.0-RELEASE</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<distributionManagement>
