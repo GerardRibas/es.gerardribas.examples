@@ -8,7 +8,6 @@ import java.util.Date;
 import java.util.List;
 
 import org.junit.Assert;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,8 +50,8 @@ public class BillDaoTestCase extends AbstractTransactionalJUnit4SpringContextTes
 	
 	@Test
 	public void testListFirstTenBills() {
-		List<Bill> customers = billDao.findAll(Bill.class,0,10);
-		Assert.assertNotNull(customers);
+		List<Bill> bills = billDao.findAll(Bill.class,0,10);
+		Assert.assertNotNull(bills);
 	}
 	
 	@Test
@@ -76,6 +75,13 @@ public class BillDaoTestCase extends AbstractTransactionalJUnit4SpringContextTes
 		Bill billPersisted = billDao.findById(Bill.class, bill.getId());
 		Assert.assertNotNull(billPersisted);
 		Assert.assertEquals(bill, billPersisted);
+	}
+	
+	@Test
+	public void testFindBillsByCustomerId(){
+		List<Bill> bills = billDao.findBillsByCustomerId(1L);
+		Assert.assertNotNull(bills);
+		Assert.assertEquals(6, bills.size());
 	}
 
 }

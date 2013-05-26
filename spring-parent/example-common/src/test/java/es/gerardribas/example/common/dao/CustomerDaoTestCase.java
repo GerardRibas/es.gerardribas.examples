@@ -46,11 +46,10 @@ public class CustomerDaoTestCase {
 	@Test
 	public void testPersist() {
 		Customer customer = new Customer();
-		customer.setId(1111L);
 		customer.setName("Gerard");
 		customer.setSurname("Ribas");
 		customerDao.persist(customer);
-		Customer customerFromDB = customerDao.findById(Customer.class, 1111L);
+		Customer customerFromDB = customerDao.findById(Customer.class, 20L);
 		Assert.assertNotNull(customerFromDB);
 		Assert.assertEquals(customer, customerFromDB);
 	}

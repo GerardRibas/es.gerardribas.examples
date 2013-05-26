@@ -10,8 +10,8 @@
 	<packaging>war</packaging>
 
 	<properties>
-		<vaadin.version>6.8.7</vaadin.version>
-		<aspectj.version>1.7.1</aspectj.version>
+		<vaadin.version>6.8.9</vaadin.version>
+		<aspectj.version>1.7.2</aspectj.version>
 	</properties>
 
 	<dependencies>

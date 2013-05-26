@@ -1,0 +1,70 @@
+<h3>My Best Customers</h3>
+<div class="row spacer">
+    <div class="span12">
+        <div class="pull-right">
+            <button class="btn btn-success" ng-click="openCreate()">Create
+                Customer</button>
+            <br /> <br />
+        </div>
+    </div>
+</div>
+<div id="alerts">
+    <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+</div>
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody ng-init="getCustomers()">
+        <tr ng-repeat="customer in customers" ng-click="openUpdate(customer)">
+            <td>{{ $index + 1 }}</td>
+            <td>{{ customer.name }}</td>
+            <td>{{ customer.surname }}</td>
+            <td>{{ customer.city }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div modal="shouldBeOpen" close="close()" options="opts">
+    <div class="modal-header">
+        <h4>Customer {{customer.surname}}, {{customer.name}}</h4>
+    </div>
+    <div class="modal-body">
+        <div class="row-fluid">
+            <div class="row-fluid">
+                <div class="control-group span6">
+                    <label for="first-name">First Name</label>
+                    <input id="first-name" type="text" class="input-block-level" value="{{ customer.name }}" ng-model="customer.name">
+                </div>
+                <div class="control-group span6">
+                    <label for="last-name">Last Name</label> 
+                    <input id="last-name" type="text" class="input-block-level" value="{{ customer.surname }}" ng-model="customer.surname">
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="control-group span9">
+                    <label for="city">City</label> 
+                    <input id="city" type="text" class="input-block-level" value="{{ customer.city }}" ng-model="customer.city">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="row-fluid">
+            <div class="pull-right">
+                <button class="btn btn-success" ng-click="update()" ng-show="isModalUpdate">Save</button>
+                <button class="btn btn-danger" ng-click="remove()" ng-show="isModalUpdate">Delete</button>
+                <button class="btn btn-success" ng-click="create()" ng-hide="isModalUpdate">Create</button>
+                <button class="btn btn-warning cancel" ng-click="close()">Cancel</button>
+            </div>
+            <div class="pull-left">
+                <a class="btn btn-success" ng-click="goToBills(customer)" ng-show="isModalUpdate">Bills</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -24,11 +24,17 @@
 			<artifactId>hsqldb</artifactId>
 			<version>${org.hsqldb.version}</version>
 		</dependency>
+		<dependency>
+	<groupId>org.codehaus.jackson</groupId>
+	<artifactId>jackson-core-asl</artifactId>
+	<version>1.9.12</version>
+</dependency>
+            
 	</dependencies>
 	
 	<properties>
-		<gerardribas.persistence.version>1.0.0-RELEASE</gerardribas.persistence.version>
-		<hibernate-core-version>4.1.9.Final</hibernate-core-version>
+		<gerardribas.persistence.version>1.0.2-SNAPSHOT</gerardribas.persistence.version>
+		<hibernate-core-version>4.2.0.Final</hibernate-core-version>
 		<org.hsqldb.version>2.2.9</org.hsqldb.version>
 	</properties>
 

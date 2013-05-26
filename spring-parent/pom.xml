@@ -35,14 +35,15 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
 
 	<properties>
-		<org.springframework.version>3.2.1.RELEASE</org.springframework.version>
+		<junit.version>4.11</junit.version>
+		<org.springframework.version>3.2.2.RELEASE</org.springframework.version>
 	</properties>
 
 	<modules>
@@ -52,5 +53,7 @@
 		<module>example-common</module>
 		<module>spring-vaadin</module>
 		<module>spring-activitibpm</module>
+		<module>spring-vaadin7</module>
+		<module>spring-angularjs</module>
 	</modules>
 </project>

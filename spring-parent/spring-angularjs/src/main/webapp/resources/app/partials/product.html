@@ -1,0 +1,89 @@
+<h3>Products Available</h3>
+<div class="row spacer">
+    <div class="span12">
+        <div class="pull-right">
+            <button class="btn btn-success" ng-click="openCreate()">Create
+                Product</button>
+            <br /> <br />
+        </div>
+    </div>
+</div>
+<div id="alerts">
+    <alert ng-repeat="alert in alerts" type="alert.type"
+        close="closeAlert($index)">{{alert.msg}}</alert>
+</div>
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Unit Price</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody ng-init="getProducts()">
+        <tr ng-repeat="product in products"
+            ng-click="openUpdate(product)">
+            <td>{{ $index + 1 }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.unitPrice }}</td>
+            <td>{{ product.stock }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div modal="shouldBeOpen" close="close()" options="opts">
+    <div class="modal-header">
+        <h4>Product {{product.name}}, {{product.description}}</h4>
+    </div>
+    <div class="modal-body">
+        <div class="row-fluid">
+            <div class="row-fluid">
+                <div class="control-group span6">
+                    <label for="name">Product Name</label> <input
+                        id="name" type="text" class="input-block-level"
+                        value="{{ product.name }}"
+                        ng-model="product.name">
+                </div>
+                <div class="control-group span6">
+                    <label for="description">Product Description</label>
+                    <input id="description" type="text"
+                        class="input-block-level"
+                        value="{{ product.description }}"
+                        ng-model="product.description">
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="control-group span6">
+                    <label for="unit-price">Unit Price</label> <input
+                        id="unit-price" type="number"
+                        class="input-block-level"
+                        value="{{ product.unitPrice }}"
+                        ng-model="product.unitPrice">
+                </div>
+                <div class="control-group span6">
+                    <label for="stock">Stock</label> <input id="stock"
+                        type="number" class="input-block-level"
+                        value="{{ product.stock }}"
+                        ng-model="product.stock">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <div class="row-fluid">
+            <div class="pull-right">
+                <button class="btn btn-success" ng-click="update()"
+                    ng-show="isModalUpdate">Save</button>
+                <button class="btn btn-danger" ng-click="remove()"
+                    ng-show="isModalUpdate">Delete</button>
+                <button class="btn btn-success" ng-click="create()"
+                    ng-hide="isModalUpdate">Create</button>
+                <button class="btn btn-warning cancel"
+                    ng-click="close()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

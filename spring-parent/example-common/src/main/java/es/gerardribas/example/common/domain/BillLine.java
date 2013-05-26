@@ -14,6 +14,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+
 /**
  * @author Gerard Ribas Canals (gerard.ribas.canals@gmail.com)
  *
@@ -30,6 +32,7 @@ public class BillLine implements Serializable {
 
 	@ManyToOne
 	@JoinColumn(name="billid")
+	@JsonIgnore
 	private Bill bill;
 
 	@ManyToOne
