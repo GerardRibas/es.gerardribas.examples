@@ -45,4 +45,10 @@ public class DateMBeanTestCase {
 		Date dateJMX = (Date) mBeanServerConnection.invoke(objectName, operationName, null, null);
 		Assert.assertNotNull(dateJMX);
 	}
+	
+	@Test
+	public void testClientConnectorWithJConsole() throws InterruptedException{
+		System.out.println("Time to open your jconsole with these parameters:");
+		Thread.sleep(132321321312L);
+	}
 }
