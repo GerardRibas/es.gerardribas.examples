@@ -49,6 +49,6 @@ public class DateMBeanTestCase {
 	@Test
 	public void testClientConnectorWithJConsole() throws InterruptedException{
 		System.out.println("Time to open your jconsole with these parameters:");
-		Thread.sleep(132321321312L);
+		Thread.sleep(5000L);
 	}
 }

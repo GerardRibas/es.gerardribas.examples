@@ -9,8 +9,8 @@
 	<artifactId>spring-activitibpm</artifactId>
 
 	<properties>
-		<org.activiti.version>5.12.1</org.activiti.version>
-		<com.h2database.version>1.3.171</com.h2database.version>
+		<org.activiti.version>5.14</org.activiti.version>
+		<com.h2database.version>1.3.174</com.h2database.version>
 	</properties>
 
 	<dependencies>
