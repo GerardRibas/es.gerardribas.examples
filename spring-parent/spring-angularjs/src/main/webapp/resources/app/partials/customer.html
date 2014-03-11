@@ -3,8 +3,9 @@
     <div class="span12">
         <div class="pull-right">
             <button class="btn btn-success" ng-click="openCreate()">Create
-                Customer</button>
-            <br /> <br />
+                Customer
+            </button>
+            <br/> <br/>
         </div>
     </div>
 </div>
@@ -13,20 +14,20 @@
 </div>
 <table class="table table-bordered table-striped table-hover">
     <thead>
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Surname</th>
-            <th>City</th>
-        </tr>
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>City</th>
+    </tr>
     </thead>
     <tbody ng-init="getCustomers()">
-        <tr ng-repeat="customer in customers" ng-click="openUpdate(customer)">
-            <td>{{ $index + 1 }}</td>
-            <td>{{ customer.name }}</td>
-            <td>{{ customer.surname }}</td>
-            <td>{{ customer.city }}</td>
-        </tr>
+    <tr ng-repeat="customer in customers" ng-click="openUpdate(customer)">
+        <td>{{ $index + 1 }}</td>
+        <td>{{ customer.name }}</td>
+        <td>{{ customer.surname }}</td>
+        <td>{{ customer.city }}</td>
+    </tr>
     </tbody>
 </table>
 
@@ -39,17 +40,20 @@
             <div class="row-fluid">
                 <div class="control-group span6">
                     <label for="first-name">First Name</label>
-                    <input id="first-name" type="text" class="input-block-level" value="{{ customer.name }}" ng-model="customer.name">
+                    <input id="first-name" type="text" class="input-block-level" value="{{ customer.name }}"
+                           ng-model="customer.name">
                 </div>
                 <div class="control-group span6">
-                    <label for="last-name">Last Name</label> 
-                    <input id="last-name" type="text" class="input-block-level" value="{{ customer.surname }}" ng-model="customer.surname">
+                    <label for="last-name">Last Name</label>
+                    <input id="last-name" type="text" class="input-block-level" value="{{ customer.surname }}"
+                           ng-model="customer.surname">
                 </div>
             </div>
             <div class="row-fluid">
                 <div class="control-group span9">
-                    <label for="city">City</label> 
-                    <input id="city" type="text" class="input-block-level" value="{{ customer.city }}" ng-model="customer.city">
+                    <label for="city">City</label>
+                    <input id="city" type="text" class="input-block-level" value="{{ customer.city }}"
+                           ng-model="customer.city">
                 </div>
             </div>
         </div>

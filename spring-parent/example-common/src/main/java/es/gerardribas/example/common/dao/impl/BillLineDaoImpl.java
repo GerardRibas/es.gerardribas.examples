@@ -1,17 +1,15 @@
 /**
- * 
+ *
  */
 package es.gerardribas.example.common.dao.impl;
-
-import org.springframework.stereotype.Repository;
 
 import es.gerardribas.example.common.dao.BillLineDao;
 import es.gerardribas.example.common.domain.BillLine;
 import es.gerardribas.persistence.dao.impl.AbstractJpaDaoImpl;
+import org.springframework.stereotype.Repository;
 
 /**
  * @author
- *
  */
 @SuppressWarnings("serial")
 @Repository

@@ -1,41 +1,43 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<artifactId>spring-parent</artifactId>
-		<groupId>es.gerardribas</groupId>
-		<version>1.0.1-SNAPSHOT</version>
-		<relativePath>..</relativePath>
-	</parent>
-	<artifactId>example-common</artifactId>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>spring-parent</artifactId>
+        <groupId>es.gerardribas</groupId>
+        <version>1.0.1-SNAPSHOT</version>
+        <relativePath>..</relativePath>
+    </parent>
+    <artifactId>example-common</artifactId>
 
-	<dependencies>
-		<dependency>
-			<groupId>es.gerardribas</groupId>
-			<artifactId>persistence</artifactId>
-			<version>${gerardribas.persistence.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>${hibernate-core-version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hsqldb</groupId>
-			<artifactId>hsqldb</artifactId>
-			<version>${org.hsqldb.version}</version>
-		</dependency>
-		<dependency>
-	<groupId>org.codehaus.jackson</groupId>
-	<artifactId>jackson-core-asl</artifactId>
-	<version>1.9.12</version>
-</dependency>
-            
-	</dependencies>
-	
-	<properties>
-		<gerardribas.persistence.version>1.0.3.RELEASE</gerardribas.persistence.version>
-		<hibernate-core-version>4.3.1.Final</hibernate-core-version>
-		<org.hsqldb.version>2.3.2</org.hsqldb.version>
-	</properties>
+    <dependencies>
+        <dependency>
+            <groupId>es.gerardribas</groupId>
+            <artifactId>persistence</artifactId>
+            <version>${gerardribas.persistence.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate-core-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>${org.hsqldb.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson-databind.version}</version>
+        </dependency>
+    </dependencies>
+
+    <properties>
+        <gerardribas.persistence.version>1.0.3.RELEASE</gerardribas.persistence.version>
+        <hibernate-core-version>4.3.1.Final</hibernate-core-version>
+        <org.hsqldb.version>2.3.2</org.hsqldb.version>
+        <org.codehaus.jackson.version>1.9.13</org.codehaus.jackson.version>
+        <jackson-databind.version>2.3.0</jackson-databind.version>
+    </properties>
 
 </project>

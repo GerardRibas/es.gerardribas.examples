@@ -1,59 +1,62 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<artifactId>example-parent</artifactId>
-		<groupId>es.gerardribas</groupId>
-		<version>1.0.1-SNAPSHOT</version>
-		<relativePath>..</relativePath>
-	</parent>
-	<artifactId>spring-parent</artifactId>
-	<packaging>pom</packaging>
-	<name>Spring Parent Pom</name>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>example-parent</artifactId>
+        <groupId>es.gerardribas</groupId>
+        <version>1.0.1-SNAPSHOT</version>
+        <relativePath>..</relativePath>
+    </parent>
+    <artifactId>spring-parent</artifactId>
+    <packaging>pom</packaging>
+    <name>Spring Parent Pom</name>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>${org.springframework.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${org.springframework.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-			<version>${org.springframework.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jdbc</artifactId>
-			<version>${org.springframework.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${org.springframework.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${org.springframework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 
-	<properties>
-		<junit.version>4.11</junit.version>
-		<org.springframework.version>4.0.1.RELEASE</org.springframework.version>
-	</properties>
+    <properties>
+        <junit.version>4.11</junit.version>
+        <org.springframework.version>4.0.2.RELEASE</org.springframework.version>
+    </properties>
 
-	<modules>
-		<module>jmx</module>
-		<module>spring-dependency-injection-annotation</module>
-		<module>spring-dependency-injection-xml</module>
-		<module>example-common</module>
-		<module>spring-vaadin</module>
-		<module>spring-activitibpm</module>
-		<module>spring-vaadin7</module>
-		<module>spring-angularjs</module>
-	</modules>
+    <modules>
+        <module>jmx</module>
+        <module>spring-dependency-injection-annotation</module>
+        <module>spring-dependency-injection-xml</module>
+        <module>example-common</module>
+        <module>spring-vaadin</module>
+        <module>spring-activitibpm</module>
+        <module>spring-vaadin7</module>
+        <module>spring-angularjs</module>
+        <module>spring-cache</module>
+        <module>spring-rest-api</module>
+    </modules>
 </project>

@@ -1,7 +1,8 @@
 <h3>Bill Detail</h3>
 <div id="alerts">
     <alert ng-repeat="alert in alerts" type="alert.type"
-        close="closeAlert($index)">{{alert.msg}}</alert>
+           close="closeAlert($index)">{{alert.msg}}
+    </alert>
 </div>
 <legend>Customer Details</legend>
 <div class="row-fluid" ng-init="getCustomerBills()">
@@ -25,22 +26,21 @@
 <legend>Bills</legend>
 
 
-
 <table class="table table-bordered table-striped table-hover"
-    ng-show="bills.length">
+       ng-show="bills.length">
     <thead>
-        <tr>
-            <th>#</th>
-            <th>Date</th>
-            <th>Total</th>
-        </tr>
+    <tr>
+        <th>#</th>
+        <th>Date</th>
+        <th>Total</th>
+    </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="bill in bills" ng-click="openUpdate(bill)">
-            <td>{{ $index + 1 }}</td>
-            <td>{{ bill.date | date:'dd-MM-yyyy'}}</td>
-            <td>{{ bill.price | currency:"&#8364;"}}</td>
-        </tr>
+    <tr ng-repeat="bill in bills" ng-click="openUpdate(bill)">
+        <td>{{ $index + 1 }}</td>
+        <td>{{ bill.date | date:'dd-MM-yyyy'}}</td>
+        <td>{{ bill.price | currency:"&#8364;"}}</td>
+    </tr>
     </tbody>
 </table>
 
@@ -54,22 +54,22 @@
     </div>
     <table class="table table-bordered table-striped table-hover">
         <thead>
-            <tr>
-                <th>#</th>
-                <th>Product Name</th>
-                <th>Product Desc</th>
-                <th>Unit Price</th>
-                <th>Price Line</th>
-            </tr>
+        <tr>
+            <th>#</th>
+            <th>Product Name</th>
+            <th>Product Desc</th>
+            <th>Unit Price</th>
+            <th>Price Line</th>
+        </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="detail in bill.detail">
-                <td>{{ $index + 1 }}</td>
-                <td>{{ detail.product.name}}</td>
-                <td>{{ detail.product.description}}</td>
-                <td>{{ detail.product.unitPrice}}</td>
-                <td>{{ detail.priceLine}}</td>
-            </tr>
+        <tr ng-repeat="detail in bill.detail">
+            <td>{{ $index + 1 }}</td>
+            <td>{{ detail.product.name}}</td>
+            <td>{{ detail.product.description}}</td>
+            <td>{{ detail.product.unitPrice}}</td>
+            <td>{{ detail.priceLine}}</td>
+        </tr>
         </tbody>
     </table>
     <div class="modal-footer">
@@ -82,4 +82,5 @@
     </div>
 </div>
 <div class="alert alert-info" ng-show="!bills.length">No bills for
-    this user</div>
+    this user
+</div>
